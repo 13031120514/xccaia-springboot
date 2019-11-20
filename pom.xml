@@ -5,7 +5,7 @@
     <groupId>com.xc</groupId>
     <artifactId>xccaia</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>xccaia</name>
+    <name>xccaia-spring</name>
     <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
 

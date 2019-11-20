@@ -16,7 +16,6 @@ public class StorkController {
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
-
     String key = "stock";
 
     @RequestMapping("/reduceStock1")
@@ -45,7 +44,6 @@ public class StorkController {
     public synchronized String reduceStock2() {
         try {
             Long num = stringRedisTemplate.opsForValue().increment("lock", 0);
-
             stringRedisTemplate.expire("lock", 10, TimeUnit.SECONDS);
             // 查库存
             String strStock = stringRedisTemplate.opsForValue().get(key);
