@@ -5,14 +5,15 @@
     <groupId>com.xc</groupId>
     <artifactId>xccaia</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <modules>
-        <module>uploadAndDownload</module>
-        <module>redis</module>
-    </modules>
     <name>xccaia-spring</name>
     <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
 
+
+    <modules>
+        <module>uploadAndDownload</module>
+        <module>redis</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
