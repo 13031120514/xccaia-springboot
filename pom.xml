@@ -13,6 +13,7 @@
     <modules>
         <module>uploadAndDownload</module>
         <module>redis</module>
+        <module>base</module>
     </modules>
 
     <parent>
