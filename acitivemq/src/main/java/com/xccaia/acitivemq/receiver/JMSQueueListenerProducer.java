@@ -30,14 +30,12 @@ public class JMSQueueListenerProducer {
             MessageConsumer consumer=session.createConsumer(destination);
 
 
-            MessageListener messageListener=new MessageListener() {
-                @Override
-                public void onMessage(Message message) {
-                    try {
-                        System.out.println(((TextMessage)message).getText());
-                    } catch (JMSException e) {
-                        e.printStackTrace();
-                    }
+            // 监听方式，启动一个监听器
+            MessageListener messageListener= message -> {
+                try {
+                    System.out.println(((TextMessage)message).getText());
+                } catch (JMSException e) {
+                    e.printStackTrace();
                 }
             };
 

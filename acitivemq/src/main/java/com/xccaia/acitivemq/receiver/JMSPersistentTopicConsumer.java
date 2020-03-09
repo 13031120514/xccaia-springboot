@@ -7,7 +7,7 @@ import javax.jms.*;
 /**
  * @ Author     ：xccaia
  * @ Date       ：2020-03-08
- * @ Description：
+ * @ Description：持久化订阅消息
  */
 public class JMSPersistentTopicConsumer {
 
@@ -19,6 +19,7 @@ public class JMSPersistentTopicConsumer {
         try {
 
             connection=connectionFactory.createConnection();
+            // 持久化配置 需要唯一 客户端向jms服务器先注册客户ID,持久化broker上
             connection.setClientID("xccaia-001");
 
             connection.start();
@@ -28,6 +29,7 @@ public class JMSPersistentTopicConsumer {
             //创建目的地
             Topic destination=session.createTopic("myTopic");
             //创建发送者
+//            MessageConsumer consumer=session.createConsumer(destination);
             MessageConsumer consumer=session.createDurableSubscriber(destination,"xccaia-001");
 
             TextMessage textMessage=(TextMessage) consumer.receive();

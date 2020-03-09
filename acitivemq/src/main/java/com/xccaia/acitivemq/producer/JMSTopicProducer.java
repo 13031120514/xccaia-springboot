@@ -26,6 +26,7 @@ public class JMSTopicProducer {
             Destination destination = session.createTopic("myTopic");
             //创建发送者
             MessageProducer producer = session.createProducer(destination);
+            // 持久化订阅   NON_PERSISTENT/PERSISTENT
             producer.setDeliveryMode(DeliveryMode.PERSISTENT);
 
             //创建需要发送的消息
