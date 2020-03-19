@@ -11,7 +11,7 @@ public class JedisClientDemo {
 
         Jedis jedis = JedisConnectionUtils.getJedis();
 
-        jedis.set("xccaia", "xccaia");
+        jedis.set("xccaia", "xccaia1");
         String result = jedis.get("xccaia");
         System.out.println(result);
     }
