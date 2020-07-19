@@ -18,6 +18,9 @@ public class StorkController {
     private StringRedisTemplate stringRedisTemplate;
     String key = "stock";
 
+    /**
+     * http://localhost:8080/stock/reduceStock1
+     */
     @RequestMapping("/reduceStock1")
     @ResponseBody
     public synchronized String reduceStock1() {

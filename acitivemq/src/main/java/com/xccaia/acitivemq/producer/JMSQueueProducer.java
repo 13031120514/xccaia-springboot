@@ -21,9 +21,9 @@ public class JMSQueueProducer {
             // 通过连接工厂创捷连接,启动
             connection = connectionFactory.createConnection();
             connection.start();
-            // 通过连接创建会话  transacted  FALSE/TRUE 事物
+            // 通过连接创建会话  transacted  FALSE/TRUE 事物 设置了true 就要去签收 true加了事物 就要commit
             Session session = connection.createSession
-                    (Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
+                    (Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);// DUPS_OK_ACKNOWLEDGE延迟确认
             //通过会话创建目的地
             Destination destination = session.createQueue("myQueue");
             //通过会话创建发送者
