@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+#    username: test_cable
+#    password: Dgzb_cable@2019
+#    url: jdbc:mysql://192.168.207.110:19103/biz_data
+
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/test
+    driver-class-name: com.mysql.jdbc.Driver
+#    private static final String DB_URL = "jdbc:mysql://192.168.207.110:19103/biz_data";
+#    private static final String USER = "test_cable";
+#    private static final String PSWD = "Dgzb_cable@2019";
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.xc.model
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
