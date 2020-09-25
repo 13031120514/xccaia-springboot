@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 
 @Configuration
 // 扫描 Mapper 接口并容器管理
-@MapperScan(basePackages = DataSourceConfig.PACKAGE, sqlSessionFactoryRef = "bizSqlSessionFactory")
+@MapperScan(basePackages = DataSourceConfig.PACKAGE, sqlSessionFactoryRef = "sqlSessionFactory")
 public class DataSourceConfig {
 
 
@@ -31,8 +31,8 @@ public class DataSourceConfig {
   @Value("${spring.datasource.driver-class-name}")
   private String driverClass;
 
-  @Bean(name = "bizDataSource")
-  public DataSource bizDataSource() {
+  @Bean(name = "dataSource")
+  public DataSource DataSource() {
     DruidDataSource dataSource = new DruidDataSource();
     dataSource.setDriverClassName(driverClass);
     dataSource.setUrl(url);
@@ -44,16 +44,16 @@ public class DataSourceConfig {
     return dataSource;
   }
 
-  @Bean(name = "bizTransactionManager")
-  public DataSourceTransactionManager bizTransactionManager() {
-    return new DataSourceTransactionManager(bizDataSource());
+  @Bean(name = "transactionManager")
+  public DataSourceTransactionManager TransactionManager() {
+    return new DataSourceTransactionManager(DataSource());
   }
 
-  @Bean(name = "bizSqlSessionFactory")
-  public SqlSessionFactory bizSqlSessionFactory(@Qualifier("bizDataSource") DataSource bizDataSource)
+  @Bean(name = "sqlSessionFactory")
+  public SqlSessionFactory SqlSessionFactory(@Qualifier("dataSource") DataSource dataSource)
       throws Exception {
     final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
-    sessionFactory.setDataSource(bizDataSource);
+    sessionFactory.setDataSource(dataSource);
     sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver()
         .getResources(DataSourceConfig.MAPPER_LOCATION));
     return sessionFactory.getObject();
