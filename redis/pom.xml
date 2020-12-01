@@ -70,7 +70,18 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
+    <mirror>
+        <id>alimaven</id>
+        <mirrorOf>central</mirrorOf>
+        <name>aliyun maven</name>
+        <url>https://maven.aliyun.com/repository/central</url>
+    </mirror>
+    <mirror>
+        <id>aliyun-maven</id>
+        <mirrorOf>*</mirrorOf>
+        <name>aliyun maven</name>
+        <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+    </mirror>
     <build>
         <plugins>
             <plugin>

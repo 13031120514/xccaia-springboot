@@ -15,11 +15,11 @@ import java.util.stream.Stream;
 class ShareData {
 
     private int num = 1;// AA:1,BB:2,CC:3
-    private Lock lock = new ReentrantLock();
+    private final Lock lock = new ReentrantLock();
     // 创建3把钥匙
-    private Condition cd1 = lock.newCondition();
-    private Condition cd2 = lock.newCondition();
-    private Condition cd3 = lock.newCondition();
+    private final Condition cd1 = lock.newCondition();
+    private final Condition cd2 = lock.newCondition();
+    private final Condition cd3 = lock.newCondition();
 
     public void print2(int total) {
         lock.lock();

@@ -18,8 +18,8 @@ public class SemaphoreDemo {
     }
 
     static class DoAnything extends Thread {
-        private int num;
-        private Semaphore semaphore;
+        private final int num;
+        private final Semaphore semaphore;
 
         public DoAnything(int num, Semaphore semaphore) {
             this.num = num;

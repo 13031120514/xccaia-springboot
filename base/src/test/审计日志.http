@@ -1,0 +1,54 @@
+
+#主网
+#allDictionary     ok
+#updateDictionary  ok
+#addDictionary   ok
+#delDictionary  ok
+
+//#/#/cmc-cable/cable-dist-acquisition/data/acquisition/dictionary/allDictionary
+//#/#/cmc-cable/cable-dist-acquisition/data/acquisition/dictionary/updateDictionary
+//#/#/cmc-cable/cable-dist-acquisition/data/acquisition/dictionary/addDictionary
+//#/#/cmc-cable/cable-dist-acquisition/data/acquisition/dictionary/delDictionary
+
+
+###
+#POST http://localhost:11300/cmc-cable/data-acquisition/data/acquisition/dictionary/allDictionary
+POST http://localhost:11300/cmc-cable/cable-dist-acquisition/data/acquisition/dictionary/allDictionary
+Content-Type: application/json
+
+{
+
+}
+
+
+###
+
+POST http://localhost:11300/cmc-cable/cable-dist-acquisition/data/acquisition/dictionary/updateDictionary
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "112"
+}
+
+
+###
+
+POST http://localhost:11300/cmc-cable/cable-dist-acquisition/data/acquisition/dictionary/addDictionary
+Content-Type: application/json
+
+{
+  "code": "111",
+  "name": "xc"
+}
+
+
+###
+
+#POST http://localhost:11300/cmc-cable/cable-dist-acquisition/data/acquisition/dictionary/delDictionary
+POST http://localhost:11300/cmc-cable/data-acquisition/data/acquisition/dictionary/delDictionary
+Content-Type: application/json
+
+{
+  "id": 1
+}

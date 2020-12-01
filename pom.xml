@@ -20,8 +20,10 @@
         <module>mysql-spi</module>
         <module>spi-test</module>
         <module>oracle-spi</module>
-        <module>cloud</module>
         <module>person-api</module>
+        <module>generator</module>
+        <module>mybatis-generator</module>
+        <module>rocketMQ</module>
 
     </modules>
 

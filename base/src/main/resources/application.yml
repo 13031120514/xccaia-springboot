@@ -2,14 +2,21 @@ server:
   port: 8080
 
 spring:
+  #配置MongoDB
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
+
   datasource:
 #    username: test_cable
 #    password: Dgzb_cable@2019
-#    url: jdbc:mysql://192.168.207.110:19103/biz_data
+##    url: jdbc:mysql://192.168.207.110:19103/cable_data_acquisition
+#    url: jdbc:mysql://192.168.207.110:19103/cable_data_acquisition
 
     username: root
     password: 123456
-    url: jdbc:mysql://localhost:3306/test
+    url: jdbc:mysql://localhost:3306/cable_data_acquisition
+#    url: jdbc:mysql://localhost:3306/test
     driver-class-name: com.mysql.jdbc.Driver
 #    private static final String DB_URL = "jdbc:mysql://192.168.207.110:19103/biz_data";
 #    private static final String USER = "test_cable";
@@ -18,9 +25,15 @@ mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
   type-aliases-package: com.xc.model
 
+# true 和false 都不生效
+#  configuration:
+#    map-underscore-to-camel-case: false
+
 #showSql
 logging:
   level:
     com:
       example:
         mapper : debug
+
+
