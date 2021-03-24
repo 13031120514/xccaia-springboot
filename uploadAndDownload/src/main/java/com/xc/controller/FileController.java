@@ -2,7 +2,9 @@ package com.xc.controller;
 
 import com.xc.service.ImportService;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.*;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -24,22 +26,26 @@ public class FileController {
     private ImportService importService;
 
     //传统springmvc上传方式 需要使用spring mvc 的jar
-    @RequestMapping("/upload")
+    @RequestMapping(value = "/upload",method = RequestMethod.POST)
     @ResponseBody
-    public String getfile(@RequestParam("myfile") MultipartFile file) {
+//    public String getfile(@RequestParam("myfile") MultipartFile file) {
+    public String getfile(@RequestParam("myfile") MultipartFile file, @ModelAttribute User user) {
+//    public String getfile(@RequestParam("myfile") MultipartFile file, @RequestParam("name") String name) {
         System.out.println("file name = " + file.getOriginalFilename());
+//        System.out.println("name: " + name);
+        System.out.println("name: " + user.getName());
         // 获取文件名
         String fileName = file.getOriginalFilename();
         // 获取后缀
         String suffixName = fileName.substring(fileName.lastIndexOf("."));
         // 文件上传的路径
-        String filePath = "D:\\A_Data\\";
+        String filePath = "C:\\A_Data\\";
         // fileName处理
-        fileName = filePath+ UUID.randomUUID()+fileName;
+        fileName = filePath + UUID.randomUUID() + fileName;
         // 文件对象
         File dest = new File(fileName);
         // 创建路径
-        if(!dest.getParentFile().exists()){
+        if (!dest.getParentFile().exists()) {
             dest.getParentFile().mkdir();
         }
         try {

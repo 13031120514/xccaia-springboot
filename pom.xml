@@ -24,6 +24,7 @@
         <module>generator</module>
         <module>mybatis-generator</module>
         <module>rocketMQ</module>
+        <module>user</module>
 
     </modules>
 

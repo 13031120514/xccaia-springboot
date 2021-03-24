@@ -5,7 +5,13 @@ spring:
   #配置MongoDB
   data:
     mongodb:
+#      database: db_cable_st
+#        host: 192.168.207.234
+#        port: 27017
+#        username: cable_st
+#        password: cable_st
       uri: mongodb://localhost:27017/test
+
 
   datasource:
 #    username: test_cable

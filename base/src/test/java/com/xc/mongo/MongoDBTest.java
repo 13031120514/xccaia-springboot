@@ -113,4 +113,31 @@ public class MongoDBTest {
         System.out.println(mapList);
 
     }
+
+    @Test
+    public void x(){
+
+        QueryParam queryParam = new QueryParam("rawMaterialId", new Long(7732));
+        List<QueryParam> params = Lists.newArrayList();
+        params.add(queryParam);
+        Map map = dynamicRepository.queryOne(params, Map.class, "supplier_evaluation_raw_JSG");
+        System.out.println(map);
+
+    }
+
+
+    @Test
+    public void qqqqx(){
+
+        QueryParam queryParam = new QueryParam("rawMaterialId", new Long(7732));
+        List<QueryParam> params = Lists.newArrayList();
+        params.add(queryParam);
+        Map map = dynamicRepository.queryOne(params, Map.class, "aaaaaaaaaaaaa");
+        System.out.println(map);
+
+    }
+
+
+
+
 }
