@@ -1,6 +1,8 @@
 package com.xc.spring.processor;
 
 public interface BaseService {
-    String doSomething();
-    String eat();
+
+  String doSomething();
+
+  String eat();
 }

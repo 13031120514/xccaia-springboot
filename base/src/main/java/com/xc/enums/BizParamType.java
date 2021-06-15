@@ -1,7 +1,6 @@
 package com.xc.enums;
 
 
-
 import java.util.ArrayList;
 import java.util.List;
 

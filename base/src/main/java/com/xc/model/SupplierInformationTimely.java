@@ -15,96 +15,97 @@ import java.util.Date;
  */
 @Table(name = "cds_supplier_information_timely")
 public class SupplierInformationTimely implements Serializable {
-    private static final long serialVersionUID = 326846703314654163L;
-    /**
-     * 主键
-     */
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
-    /**
-     * 评价任务编码
-     */
-    private String taskEvaluNum;
+  private static final long serialVersionUID = 326846703314654163L;
+  /**
+   * 主键
+   */
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    /**
-     * 返回供应商评价任务信息ID
-     */
-    private Long evaluationInformationId;
+  /**
+   * 评价任务编码
+   */
+  private String taskEvaluNum;
 
-    /**
-     * 上报数据及时率评价信息项数量
-     */
-    private String timelinessRateNum;
+  /**
+   * 返回供应商评价任务信息ID
+   */
+  private Long evaluationInformationId;
 
-    /**
-     * 备注
-     */
-    private String remark;
+  /**
+   * 上报数据及时率评价信息项数量
+   */
+  private String timelinessRateNum;
 
-    /**
-     * 创建时间
-     */
-    private Date createdTime;
+  /**
+   * 备注
+   */
+  private String remark;
 
-    public Long getId() {
-        return id;
-    }
+  /**
+   * 创建时间
+   */
+  private Date createdTime;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public String getTaskEvaluNum() {
-        return taskEvaluNum;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setTaskEvaluNum(String taskEvaluNum) {
-        this.taskEvaluNum = taskEvaluNum == null ? null : taskEvaluNum.trim();
-    }
+  public String getTaskEvaluNum() {
+    return taskEvaluNum;
+  }
 
-    public Long getEvaluationInformationId() {
-        return evaluationInformationId;
-    }
+  public void setTaskEvaluNum(String taskEvaluNum) {
+    this.taskEvaluNum = taskEvaluNum == null ? null : taskEvaluNum.trim();
+  }
 
-    public void setEvaluationInformationId(Long evaluationInformationId) {
-        this.evaluationInformationId = evaluationInformationId;
-    }
+  public Long getEvaluationInformationId() {
+    return evaluationInformationId;
+  }
 
-    public String getTimelinessRateNum() {
-        return timelinessRateNum;
-    }
+  public void setEvaluationInformationId(Long evaluationInformationId) {
+    this.evaluationInformationId = evaluationInformationId;
+  }
 
-    public void setTimelinessRateNum(String timelinessRateNum) {
-        this.timelinessRateNum = timelinessRateNum == null ? null : timelinessRateNum.trim();
-    }
+  public String getTimelinessRateNum() {
+    return timelinessRateNum;
+  }
 
-    public String getRemark() {
-        return remark;
-    }
+  public void setTimelinessRateNum(String timelinessRateNum) {
+    this.timelinessRateNum = timelinessRateNum == null ? null : timelinessRateNum.trim();
+  }
 
-    public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
-    }
+  public String getRemark() {
+    return remark;
+  }
 
-    public Date getCreatedTime() {
-        return createdTime;
-    }
+  public void setRemark(String remark) {
+    this.remark = remark == null ? null : remark.trim();
+  }
 
-    public void setCreatedTime(Date createdTime) {
-        this.createdTime = createdTime;
-    }
+  public Date getCreatedTime() {
+    return createdTime;
+  }
 
-    @Override
-    public String toString() {
-        return "SupplierInformationTimely{" +
-                "id=" + id +
-                ", taskEvaluNum='" + taskEvaluNum + '\'' +
-                ", evaluationInformationId=" + evaluationInformationId +
-                ", timelinessRateNum='" + timelinessRateNum + '\'' +
-                ", remark='" + remark + '\'' +
-                ", createdTime=" + createdTime +
-                '}';
-    }
+  public void setCreatedTime(Date createdTime) {
+    this.createdTime = createdTime;
+  }
+
+  @Override
+  public String toString() {
+    return "SupplierInformationTimely{" +
+        "id=" + id +
+        ", taskEvaluNum='" + taskEvaluNum + '\'' +
+        ", evaluationInformationId=" + evaluationInformationId +
+        ", timelinessRateNum='" + timelinessRateNum + '\'' +
+        ", remark='" + remark + '\'' +
+        ", createdTime=" + createdTime +
+        '}';
+  }
 }

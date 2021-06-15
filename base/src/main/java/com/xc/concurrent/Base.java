@@ -11,18 +11,17 @@ import java.util.concurrent.FutureTask;
 public class Base {
 
 
-        public static void main(String[] args) throws ExecutionException, InterruptedException {
+  public static void main(String[] args) throws ExecutionException, InterruptedException {
 
+    FutureTask ft = new FutureTask(() -> {
+      System.out.println("Callable.call()");
+      return "ok";
+    });
 
-            FutureTask ft=new FutureTask(()->{
-                System.out.println("Callable.call()");
-                return "ok";
-            });
-
-            new Thread(ft,"xccaia").start();
+    new Thread(ft, "xccaia").start();
 //        ft.get();
-        System.out.println(ft.get());
+    System.out.println(ft.get());
 
-    }
+  }
 
 }

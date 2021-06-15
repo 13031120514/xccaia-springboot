@@ -8,173 +8,173 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "cds_supplier_raw_material_param_config_item")
-public class SupplierRawMaterialParamConfigItem  implements Serializable {
+public class SupplierRawMaterialParamConfigItem implements Serializable {
 
-	private static final long serialVersionUID = -4022381852957420165L;
+  private static final long serialVersionUID = -4022381852957420165L;
 
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    /**
-     * 模型ID
-     */
-    @Column(name = "model_id")
-    private Long modelId;
+  /**
+   * 模型ID
+   */
+  @Column(name = "model_id")
+  private Long modelId;
 
-    /**
-     * 参数编码
-     */
-    @Column(name = "param_code")
-    private String paramCode;
+  /**
+   * 参数编码
+   */
+  @Column(name = "param_code")
+  private String paramCode;
 
-    /**
-     * 关键参数
-     */
-    private Boolean pivotal;
+  /**
+   * 关键参数
+   */
+  private Boolean pivotal;
 
-    /**
-     * 采集模式（自动，人工）
-     */
-    @Column(name = "collect_mode")
-    private DataCollectMode collectMode;
+  /**
+   * 采集模式（自动，人工）
+   */
+  @Column(name = "collect_mode")
+  private DataCollectMode collectMode;
 
-    /**
-     * 是否必须
-     */
-    private Boolean required;
+  /**
+   * 是否必须
+   */
+  private Boolean required;
 
-    /**
-     * 备注
-     */
-    private String remark;
+  /**
+   * 备注
+   */
+  private String remark;
 
-    /**
-     * 创建时间
-     */
-    @Column(name = "created_time")
-    private Date createdTime;
+  /**
+   * 创建时间
+   */
+  @Column(name = "created_time")
+  private Date createdTime;
 
-    /**
-     * 更新时间
-     */
-    @Column(name = "updated_time")
-    private Date updatedTime;
-    
-    @Column(name = "created_by")
-    private String createdBy;
+  /**
+   * 更新时间
+   */
+  @Column(name = "updated_time")
+  private Date updatedTime;
 
-    @Column(name = "updated_by")
-    private String updatedBy;
+  @Column(name = "created_by")
+  private String createdBy;
 
-	public SupplierRawMaterialParamConfigItem(Long id, Long modelId, String paramCode, Boolean pivotal,
-			DataCollectMode collectMode, Boolean required, String remark, Date createdTime, Date updatedTime,
-			String createdBy, String updatedBy) {
-		super();
-		this.id = id;
-		this.modelId = modelId;
-		this.paramCode = paramCode;
-		this.pivotal = pivotal;
-		this.collectMode = collectMode;
-		this.required = required;
-		this.remark = remark;
-		this.createdTime = createdTime;
-		this.updatedTime = updatedTime;
-		this.createdBy = createdBy;
-		this.updatedBy = updatedBy;
-	}
+  @Column(name = "updated_by")
+  private String updatedBy;
 
-	public SupplierRawMaterialParamConfigItem() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+  public SupplierRawMaterialParamConfigItem(Long id, Long modelId, String paramCode, Boolean pivotal,
+      DataCollectMode collectMode, Boolean required, String remark, Date createdTime, Date updatedTime,
+      String createdBy, String updatedBy) {
+    super();
+    this.id = id;
+    this.modelId = modelId;
+    this.paramCode = paramCode;
+    this.pivotal = pivotal;
+    this.collectMode = collectMode;
+    this.required = required;
+    this.remark = remark;
+    this.createdTime = createdTime;
+    this.updatedTime = updatedTime;
+    this.createdBy = createdBy;
+    this.updatedBy = updatedBy;
+  }
 
-	public Long getId() {
-		return id;
-	}
+  public SupplierRawMaterialParamConfigItem() {
+    super();
+    // TODO Auto-generated constructor stub
+  }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+  public Long getId() {
+    return id;
+  }
 
-	public Long getModelId() {
-		return modelId;
-	}
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-	public void setModelId(Long modelId) {
-		this.modelId = modelId;
-	}
+  public Long getModelId() {
+    return modelId;
+  }
 
-	public String getParamCode() {
-		return paramCode;
-	}
+  public void setModelId(Long modelId) {
+    this.modelId = modelId;
+  }
 
-	public void setParamCode(String paramCode) {
-		this.paramCode = paramCode;
-	}
+  public String getParamCode() {
+    return paramCode;
+  }
 
-	public Boolean getPivotal() {
-		return pivotal;
-	}
+  public void setParamCode(String paramCode) {
+    this.paramCode = paramCode;
+  }
 
-	public void setPivotal(Boolean pivotal) {
-		this.pivotal = pivotal;
-	}
+  public Boolean getPivotal() {
+    return pivotal;
+  }
 
-	public DataCollectMode getCollectMode() {
-		return collectMode;
-	}
+  public void setPivotal(Boolean pivotal) {
+    this.pivotal = pivotal;
+  }
 
-	public void setCollectMode(DataCollectMode collectMode) {
-		this.collectMode = collectMode;
-	}
+  public DataCollectMode getCollectMode() {
+    return collectMode;
+  }
 
-	public Boolean getRequired() {
-		return required;
-	}
+  public void setCollectMode(DataCollectMode collectMode) {
+    this.collectMode = collectMode;
+  }
 
-	public void setRequired(Boolean required) {
-		this.required = required;
-	}
+  public Boolean getRequired() {
+    return required;
+  }
 
-	public String getRemark() {
-		return remark;
-	}
+  public void setRequired(Boolean required) {
+    this.required = required;
+  }
 
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
+  public String getRemark() {
+    return remark;
+  }
 
-	public Date getCreatedTime() {
-		return createdTime;
-	}
+  public void setRemark(String remark) {
+    this.remark = remark;
+  }
 
-	public void setCreatedTime(Date createdTime) {
-		this.createdTime = createdTime;
-	}
+  public Date getCreatedTime() {
+    return createdTime;
+  }
 
-	public Date getUpdatedTime() {
-		return updatedTime;
-	}
+  public void setCreatedTime(Date createdTime) {
+    this.createdTime = createdTime;
+  }
 
-	public void setUpdatedTime(Date updatedTime) {
-		this.updatedTime = updatedTime;
-	}
+  public Date getUpdatedTime() {
+    return updatedTime;
+  }
 
-	public String getCreatedBy() {
-		return createdBy;
-	}
+  public void setUpdatedTime(Date updatedTime) {
+    this.updatedTime = updatedTime;
+  }
 
-	public void setCreatedBy(String createdBy) {
-		this.createdBy = createdBy;
-	}
+  public String getCreatedBy() {
+    return createdBy;
+  }
 
-	public String getUpdatedBy() {
-		return updatedBy;
-	}
+  public void setCreatedBy(String createdBy) {
+    this.createdBy = createdBy;
+  }
 
-	public void setUpdatedBy(String updatedBy) {
-		this.updatedBy = updatedBy;
-	}
+  public String getUpdatedBy() {
+    return updatedBy;
+  }
+
+  public void setUpdatedBy(String updatedBy) {
+    this.updatedBy = updatedBy;
+  }
 
 }

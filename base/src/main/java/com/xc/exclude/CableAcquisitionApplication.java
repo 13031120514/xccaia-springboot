@@ -8,15 +8,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @Author: xiaochuan.cai
  * @Date: 2020/12/1
- * @Description:  
- */  
+ * @Description:
+ */
 @SpringBootApplication
 @ComponentScan(basePackages = "com.sgcc.eip.cmc.cable.acquisition.listener," +
-        "com.sgcc.eip.cmc.cable.acquisition.job",
-        useDefaultFilters = true,
-        excludeFilters = {
-                @ComponentScan.Filter(type = FilterType.CUSTOM,classes = {MyTypeFilter.class})
-        }
+    "com.sgcc.eip.cmc.cable.acquisition.job",
+    useDefaultFilters = true,
+    excludeFilters = {
+        @ComponentScan.Filter(type = FilterType.CUSTOM, classes = {MyTypeFilter.class})
+    }
 //        excludeFilters = @ComponentScan.Filter(RocketMQMessageListener.class)
 )
 public class CableAcquisitionApplication {

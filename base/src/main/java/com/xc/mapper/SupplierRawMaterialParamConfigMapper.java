@@ -7,4 +7,5 @@ import tk.mybatis.mapper.common.BaseMapper;
 
 @Mapper
 public interface SupplierRawMaterialParamConfigMapper extends BaseMapper<SupplierRawMaterialParamConfig> {
+
 }

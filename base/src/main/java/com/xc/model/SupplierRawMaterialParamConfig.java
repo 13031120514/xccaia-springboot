@@ -5,175 +5,175 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "cds_supplier_raw_material_param_config")
-public class SupplierRawMaterialParamConfig  implements Serializable {
+public class SupplierRawMaterialParamConfig implements Serializable {
 
-	private static final long serialVersionUID = 4222191010592097778L;
+  private static final long serialVersionUID = 4222191010592097778L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-	
-    @Column(name = "supplier_code")
-    private String supplierCode;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    private Integer version;
-    
-    @Column(name = "category_code")
-    private String categoryCode;
-    /**
-          * 信息编码
-     */
-    @Column(name = "info_code")
-    private String infoCode;
-    /**
-     * 信息名称
-     */
-    @Column(name = "info_name")
-    private String infoName;
-    
-    @Column(name = "param_number")
-    private Integer paramNumber;
+  @Column(name = "supplier_code")
+  private String supplierCode;
 
-    private String remark;
+  private Integer version;
 
-    @Column(name = "created_time")
-    private Date createdTime;
+  @Column(name = "category_code")
+  private String categoryCode;
+  /**
+   * 信息编码
+   */
+  @Column(name = "info_code")
+  private String infoCode;
+  /**
+   * 信息名称
+   */
+  @Column(name = "info_name")
+  private String infoName;
 
-    @Column(name = "created_by")
-    private String createdBy;
+  @Column(name = "param_number")
+  private Integer paramNumber;
 
-    @Column(name = "updated_time")
-    private Date updatedTime;
+  private String remark;
 
-    @Column(name = "updated_by")
-    private String updatedBy;
+  @Column(name = "created_time")
+  private Date createdTime;
 
-    private Byte deleted;
+  @Column(name = "created_by")
+  private String createdBy;
 
-	public SupplierRawMaterialParamConfig() {
-		super();
-	}
+  @Column(name = "updated_time")
+  private Date updatedTime;
 
-	public SupplierRawMaterialParamConfig(Long id, String supplierCode, Integer version, String categoryCode,
-			String infoCode, String infoName, Integer paramNumber, String remark, Date createdTime, String createdBy,
-			Date updatedTime, String updatedBy, Byte deleted) {
-		super();
-		this.id = id;
-		this.supplierCode = supplierCode;
-		this.version = version;
-		this.categoryCode = categoryCode;
-		this.infoCode = infoCode;
-		this.infoName = infoName;
-		this.paramNumber = paramNumber;
-		this.remark = remark;
-		this.createdTime = createdTime;
-		this.createdBy = createdBy;
-		this.updatedTime = updatedTime;
-		this.updatedBy = updatedBy;
-		this.deleted = deleted;
-	}
+  @Column(name = "updated_by")
+  private String updatedBy;
 
-	public Long getId() {
-		return id;
-	}
+  private Byte deleted;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+  public SupplierRawMaterialParamConfig() {
+    super();
+  }
 
-	public String getSupplierCode() {
-		return supplierCode;
-	}
+  public SupplierRawMaterialParamConfig(Long id, String supplierCode, Integer version, String categoryCode,
+      String infoCode, String infoName, Integer paramNumber, String remark, Date createdTime, String createdBy,
+      Date updatedTime, String updatedBy, Byte deleted) {
+    super();
+    this.id = id;
+    this.supplierCode = supplierCode;
+    this.version = version;
+    this.categoryCode = categoryCode;
+    this.infoCode = infoCode;
+    this.infoName = infoName;
+    this.paramNumber = paramNumber;
+    this.remark = remark;
+    this.createdTime = createdTime;
+    this.createdBy = createdBy;
+    this.updatedTime = updatedTime;
+    this.updatedBy = updatedBy;
+    this.deleted = deleted;
+  }
 
-	public void setSupplierCode(String supplierCode) {
-		this.supplierCode = supplierCode;
-	}
+  public Long getId() {
+    return id;
+  }
 
-	public Integer getVersion() {
-		return version;
-	}
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-	public void setVersion(Integer version) {
-		this.version = version;
-	}
+  public String getSupplierCode() {
+    return supplierCode;
+  }
 
-	public String getCategoryCode() {
-		return categoryCode;
-	}
+  public void setSupplierCode(String supplierCode) {
+    this.supplierCode = supplierCode;
+  }
 
-	public void setCategoryCode(String categoryCode) {
-		this.categoryCode = categoryCode;
-	}
+  public Integer getVersion() {
+    return version;
+  }
 
-	public String getInfoCode() {
-		return infoCode;
-	}
+  public void setVersion(Integer version) {
+    this.version = version;
+  }
 
-	public void setInfoCode(String infoCode) {
-		this.infoCode = infoCode;
-	}
+  public String getCategoryCode() {
+    return categoryCode;
+  }
 
-	public String getInfoName() {
-		return infoName;
-	}
+  public void setCategoryCode(String categoryCode) {
+    this.categoryCode = categoryCode;
+  }
 
-	public void setInfoName(String infoName) {
-		this.infoName = infoName;
-	}
+  public String getInfoCode() {
+    return infoCode;
+  }
 
-	public Integer getParamNumber() {
-		return paramNumber;
-	}
+  public void setInfoCode(String infoCode) {
+    this.infoCode = infoCode;
+  }
 
-	public void setParamNumber(Integer paramNumber) {
-		this.paramNumber = paramNumber;
-	}
+  public String getInfoName() {
+    return infoName;
+  }
 
-	public String getRemark() {
-		return remark;
-	}
+  public void setInfoName(String infoName) {
+    this.infoName = infoName;
+  }
 
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
+  public Integer getParamNumber() {
+    return paramNumber;
+  }
 
-	public Date getCreatedTime() {
-		return createdTime;
-	}
+  public void setParamNumber(Integer paramNumber) {
+    this.paramNumber = paramNumber;
+  }
 
-	public void setCreatedTime(Date createdTime) {
-		this.createdTime = createdTime;
-	}
+  public String getRemark() {
+    return remark;
+  }
 
-	public String getCreatedBy() {
-		return createdBy;
-	}
+  public void setRemark(String remark) {
+    this.remark = remark;
+  }
 
-	public void setCreatedBy(String createdBy) {
-		this.createdBy = createdBy;
-	}
+  public Date getCreatedTime() {
+    return createdTime;
+  }
 
-	public Date getUpdatedTime() {
-		return updatedTime;
-	}
+  public void setCreatedTime(Date createdTime) {
+    this.createdTime = createdTime;
+  }
 
-	public void setUpdatedTime(Date updatedTime) {
-		this.updatedTime = updatedTime;
-	}
+  public String getCreatedBy() {
+    return createdBy;
+  }
 
-	public String getUpdatedBy() {
-		return updatedBy;
-	}
+  public void setCreatedBy(String createdBy) {
+    this.createdBy = createdBy;
+  }
 
-	public void setUpdatedBy(String updatedBy) {
-		this.updatedBy = updatedBy;
-	}
+  public Date getUpdatedTime() {
+    return updatedTime;
+  }
 
-	public Byte getDeleted() {
-		return deleted;
-	}
+  public void setUpdatedTime(Date updatedTime) {
+    this.updatedTime = updatedTime;
+  }
 
-	public void setDeleted(Byte deleted) {
-		this.deleted = deleted;
-	}
+  public String getUpdatedBy() {
+    return updatedBy;
+  }
+
+  public void setUpdatedBy(String updatedBy) {
+    this.updatedBy = updatedBy;
+  }
+
+  public Byte getDeleted() {
+    return deleted;
+  }
+
+  public void setDeleted(Byte deleted) {
+    this.deleted = deleted;
+  }
 }

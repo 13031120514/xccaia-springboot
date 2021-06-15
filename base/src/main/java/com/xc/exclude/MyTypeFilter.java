@@ -13,18 +13,19 @@ import java.io.IOException;
  * @Description:
  */
 public class MyTypeFilter implements TypeFilter {
-    @Override
-    public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactony)
-            throws IOException {
-        ClassMetadata classMetadata = metadataReader.getClassMetadata();
-        String className = classMetadata.getClassName();
-        System.out.println("className --> ** + className");
-        if (className.contains("com.sgcc.eip.cmc.cable.acquisition.listener") ||
-                className.contains("com.sgcc.eip.cmc.cable.acquisition.job")) {
-            System.out.println("exclude java file is " + className);
-            return true;
-        }
-        return false;
 
+  @Override
+  public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactony)
+      throws IOException {
+    ClassMetadata classMetadata = metadataReader.getClassMetadata();
+    String className = classMetadata.getClassName();
+    System.out.println("className --> ** + className");
+    if (className.contains("com.sgcc.eip.cmc.cable.acquisition.listener") ||
+        className.contains("com.sgcc.eip.cmc.cable.acquisition.job")) {
+      System.out.println("exclude java file is " + className);
+      return true;
     }
+    return false;
+
+  }
 }

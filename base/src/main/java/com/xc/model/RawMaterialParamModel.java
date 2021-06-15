@@ -181,17 +181,17 @@ public class RawMaterialParamModel implements Serializable {
   @Override
   public String toString() {
     return "RawMaterialParamModel{" +
-            "id=" + id +
-            ", version=" + version +
-            ", categoryCode='" + categoryCode + '\'' +
-            ", infoCode='" + infoCode + '\'' +
-            ", infoName='" + infoName + '\'' +
-            ", paramNumber=" + paramNumber +
-            ", remark='" + remark + '\'' +
-            ", createdBy='" + createdBy + '\'' +
-            ", createdTime=" + createdTime +
-            ", updatedBy='" + updatedBy + '\'' +
-            ", updatedTime=" + updatedTime +
-            '}';
+        "id=" + id +
+        ", version=" + version +
+        ", categoryCode='" + categoryCode + '\'' +
+        ", infoCode='" + infoCode + '\'' +
+        ", infoName='" + infoName + '\'' +
+        ", paramNumber=" + paramNumber +
+        ", remark='" + remark + '\'' +
+        ", createdBy='" + createdBy + '\'' +
+        ", createdTime=" + createdTime +
+        ", updatedBy='" + updatedBy + '\'' +
+        ", updatedTime=" + updatedTime +
+        '}';
   }
 }

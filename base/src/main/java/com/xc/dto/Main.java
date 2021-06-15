@@ -6,8 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Main {
 
-    public static void main(String[] args) {
-
+  public static void main(String[] args) {
 
 //        ProtocolGatherRepDTO protocolGatherRepDTO = new ProtocolGatherRepDTO();
 //
@@ -23,20 +22,19 @@ public class Main {
 //            e.printStackTrace();
 //        }
 
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_DEFAULT);
+    ObjectMapper objectMapper = new ObjectMapper();
+    objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+    objectMapper.setSerializationInclusion(JsonInclude.Include.NON_DEFAULT);
 
 //        private int id ;
 //        private int age ;
 //        private String name;
 
-        User user=new User();
-        user.setId(11);
-        try {
-            String jsonString = objectMapper.writeValueAsString(user);
-            System.out.println(jsonString);
+    User user = new User();
+    user.setId(11);
+    try {
+      String jsonString = objectMapper.writeValueAsString(user);
+      System.out.println(jsonString);
 
 //            String jsonString="{\"id\":11,\"name\":null,\"age\":11}";
 //             jsonString="{\"name\":null,\"age\":11}";
@@ -44,10 +42,10 @@ public class Main {
 //            User user1 = new ObjectMapper().readValue(jsonString, User.class);
 //            System.out.println(user1);
 //            System.out.println(user1);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
+    } catch (Exception e) {
+      e.printStackTrace();
     }
+
+
+  }
 }
