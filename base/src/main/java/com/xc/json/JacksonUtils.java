@@ -4,8 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sgcc.eip.cable.common.constant.ErrorCodes;
-import com.sgcc.eip.cable.common.exception.Exception;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,7 +21,7 @@ public class JacksonUtils {
       result = objectMapper.writeValueAsString(object);
     } catch (JsonProcessingException e) {
       log.error("Jackson-对象转String失败，message:" + e.getMessage(), e);
-      throw new Exception("Jackson-对象转String失败");
+      throw new RuntimeException("Jackson-对象转String失败");
     }
     return result;
   }
