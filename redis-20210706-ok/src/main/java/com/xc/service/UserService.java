@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @CacheConfig(cacheNames = "test:user")
+//@CacheConfig(cacheNames = "test")
 public class UserService {
 
   private static Map<String, User> map = new HashMap<>();
