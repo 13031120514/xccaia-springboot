@@ -1,10 +1,12 @@
 package com.xc.entity;
 
+import javax.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
 public class User {
 
+  @NotNull
   private String id;
   private String name;
   private String age;

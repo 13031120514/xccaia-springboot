@@ -9,8 +9,11 @@ import io.swagger.annotations.ApiOperation;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -38,6 +41,15 @@ public class RedisCacheController2 {
   public User getOne(@RequestParam(value = "id") String id) {
     User user = userService.getOne(id);
     return user;
+  }
+
+  @RequestMapping(value = "/getOne2", method = RequestMethod.POST)
+  @ResponseBody
+  @ApiOperation(value = "获取用户详细信息=@Valid", notes = "@Valid-根据url的id来获取用户详细信息")
+  // Valid  Validated
+  public User getOne(@Validated @RequestBody User user) {
+    User result = userService.getOne(user.getId());
+    return result;
   }
 
   @RequestMapping(value = "/clear", method = RequestMethod.POST)
