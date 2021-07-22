@@ -9,8 +9,8 @@ import com.xc.DataBaseDriver;
  */
 public class MysqlDataBaseDriver implements DataBaseDriver {
 
-    @Override
-    public void connect(String host) {
-        System.out.println("Build connect with mysql");
-    }
+  @Override
+  public void connect(String host) {
+    System.out.println("Build connect with mysql");
+  }
 }

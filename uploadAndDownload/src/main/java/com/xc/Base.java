@@ -6,4 +6,5 @@ package com.xc;
  * @ Description：
  */
 public class Base {
+
 }

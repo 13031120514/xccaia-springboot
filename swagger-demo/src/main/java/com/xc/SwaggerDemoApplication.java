@@ -10,11 +10,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 public class SwaggerDemoApplication {
-    public static void main(String[] args) {
-        System.out.println("访问这个地址来查询接口");
-        System.out.println("http://localhost:8801/swagger-ui.html");
-        SpringApplication.run(SwaggerDemoApplication.class, args);
-        System.out.println("访问这个地址来查询接口");
-        System.out.println("http://localhost:8801/swagger-ui.html");
-    }
+
+  public static void main(String[] args) {
+    System.out.println("访问这个地址来查询接口");
+    System.out.println("http://localhost:8801/swagger-ui.html");
+    SpringApplication.run(SwaggerDemoApplication.class, args);
+    System.out.println("访问这个地址来查询接口");
+    System.out.println("http://localhost:8801/swagger-ui.html");
+  }
 }

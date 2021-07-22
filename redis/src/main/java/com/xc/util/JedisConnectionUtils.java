@@ -10,15 +10,16 @@ import redis.clients.jedis.JedisPoolConfig;
  * @ Description：
  */
 public class JedisConnectionUtils {
-    private static JedisPool pool = null;
 
-    static {
-        JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
-        jedisPoolConfig.setMaxTotal(100);
-        pool = new JedisPool(jedisPoolConfig, "127.0.0.1", 6379);
-    }
+  private static JedisPool pool = null;
 
-    public static Jedis getJedis() {
-        return pool.getResource();
-    }
+  static {
+    JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+    jedisPoolConfig.setMaxTotal(100);
+    pool = new JedisPool(jedisPoolConfig, "127.0.0.1", 6379);
+  }
+
+  public static Jedis getJedis() {
+    return pool.getResource();
+  }
 }

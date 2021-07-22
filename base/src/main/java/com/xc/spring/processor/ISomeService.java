@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ISomeService implements BaseService {
-​
 
   public String doSomething() {
     // 增强效果：返回内容全部大写

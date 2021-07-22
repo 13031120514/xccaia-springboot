@@ -6,4 +6,5 @@ package com.xc.service;
  * @ Description：
  */
 public class UserService {
+
 }

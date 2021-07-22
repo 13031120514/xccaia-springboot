@@ -11,18 +11,16 @@ import java.util.concurrent.ConcurrentHashMap;
 public class DriverTest {
 
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-
-        ConcurrentHashMap map = new ConcurrentHashMap();
-        map.put(1, 1);
-        System.out.println(map.get(1));
+    ConcurrentHashMap map = new ConcurrentHashMap();
+    map.put(1, 1);
+    System.out.println(map.get(1));
 //        map.putVal(1, 2,false);
-        map.putIfAbsent(1,2);
-        System.out.println(map.get(1));
-        map.put(1,2);
-        System.out.println(map.get(1));
-
+    map.putIfAbsent(1, 2);
+    System.out.println(map.get(1));
+    map.put(1, 2);
+    System.out.println(map.get(1));
 
 //        ServiceLoader<DataBaseDriver> serviceLoader = ServiceLoader
 //                .load(DataBaseDriver.class);
@@ -31,8 +29,7 @@ public class DriverTest {
 //            dataBaseDriver.connect("lcoalhost");
 //        }
 
-    }
-
+  }
 
 
 }

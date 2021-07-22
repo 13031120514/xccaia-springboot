@@ -20,27 +20,28 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
-    //扫描路径
-    private final String SWAGGER_SCAN_BASE_PACKAGE = "com.xc.controller";
-    //开关
-    @Value("${swagger.enable}")
-    private Boolean enable;
 
-    @Bean
-    public Docket createRestApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .enable(enable)
-                .apiInfo(apiInfo())
-                .select()
-                .apis(RequestHandlerSelectors.basePackage(SWAGGER_SCAN_BASE_PACKAGE))
-                .paths(PathSelectors.any())
-                .build();
-    }
+  //扫描路径
+  private final String SWAGGER_SCAN_BASE_PACKAGE = "com.xc.controller";
+  //开关
+  @Value("${swagger.enable}")
+  private Boolean enable;
 
-    private ApiInfo apiInfo() {
-        return new ApiInfoBuilder()
-                .title("我的swagger demo API")
-                .version("1.0.0")
-                .build();
-    }
+  @Bean
+  public Docket createRestApi() {
+    return new Docket(DocumentationType.SWAGGER_2)
+        .enable(enable)
+        .apiInfo(apiInfo())
+        .select()
+        .apis(RequestHandlerSelectors.basePackage(SWAGGER_SCAN_BASE_PACKAGE))
+        .paths(PathSelectors.any())
+        .build();
+  }
+
+  private ApiInfo apiInfo() {
+    return new ApiInfoBuilder()
+        .title("我的swagger demo API")
+        .version("1.0.0")
+        .build();
+  }
 }

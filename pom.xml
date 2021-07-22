@@ -25,6 +25,9 @@
         <module>mybatis-generator</module>
         <module>rocketMQ</module>
         <module>user</module>
+        <module>mongo-xc</module>
+      <module>mybaits-test</module>
+      <module>redis-20210706-ok</module>
 
     </modules>
 
@@ -54,6 +57,11 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

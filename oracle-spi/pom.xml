@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>xccaia</artifactId>
-        <groupId>com.xc</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>xccaia</artifactId>
+    <groupId>com.xc</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>oracle-spi</artifactId>
+  <artifactId>oracle-spi</artifactId>
 
-    <name>oracle-spi</name>
-    <!--&lt;!&ndash; FIXME change it to the project's website &ndash;&gt;-->
-    <!--<url>http://www.example.com</url>-->
+  <name>oracle-spi</name>
+  <!--&lt;!&ndash; FIXME change it to the project's website &ndash;&gt;-->
+  <!--<url>http://www.example.com</url>-->
 
 
-    <dependencies>
-        <dependency>
-            <groupId>com.xc</groupId>
-            <artifactId>javaspi-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>com.xc</groupId>
+      <artifactId>javaspi-api</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 
 </project>

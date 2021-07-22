@@ -9,8 +9,8 @@ import com.xc.DataBaseDriver;
  */
 public class OracleDataBaseDriver implements DataBaseDriver {
 
-    @Override
-    public void connect(String host) {
-        System.out.println("Build connect with oracle");
-    }
+  @Override
+  public void connect(String host) {
+    System.out.println("Build connect with oracle");
+  }
 }

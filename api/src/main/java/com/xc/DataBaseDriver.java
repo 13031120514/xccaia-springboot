@@ -7,5 +7,5 @@ package com.xc;
  */
 public interface DataBaseDriver {
 
-    void connect(String host);
+  void connect(String host);
 }

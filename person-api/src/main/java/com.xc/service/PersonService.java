@@ -20,21 +20,22 @@ import java.util.Collection;
 @FeignClient(value = "person-service") // 服务提供方应用的名称
 public interface PersonService {
 
-    /**
-     * 保存
-     *
-     * @param person {@link Person}
-     * @return 如果成功，<code>true</code>
-     */
-    @PostMapping(value = "/person/save")
-    boolean save(@RequestBody Person person);
+  /**
+   * 保存
+   *
+   * @param person {@link Person}
+   *
+   * @return 如果成功，<code>true</code>
+   */
+  @PostMapping(value = "/person/save")
+  boolean save(@RequestBody Person person);
 
-    /**
-     * 查找所有的服务
-     *
-     * @return
-     */
-    @GetMapping(value = "/person/find/all")
-    Collection<Person> findAll();
+  /**
+   * 查找所有的服务
+   *
+   * @return
+   */
+  @GetMapping(value = "/person/find/all")
+  Collection<Person> findAll();
 
 }
