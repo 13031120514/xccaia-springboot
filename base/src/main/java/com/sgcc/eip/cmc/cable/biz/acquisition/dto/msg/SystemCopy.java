@@ -20,6 +20,7 @@ public class SystemCopy {
     System.out.println("数组d的各个元素中的值：");
     System.out.println(Arrays.toString(d));
 
+    System.out.println(1);
 
   }
 }
