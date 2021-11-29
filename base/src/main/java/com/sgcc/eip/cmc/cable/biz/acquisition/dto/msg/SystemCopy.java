@@ -10,6 +10,7 @@ public class SystemCopy {
         b = {'1', '2', '3', '4', '5', '6'};
     int[] c = {1, 2, 3, 4, 5, 6},
         d = {10, 20, 30, 40, 50, 60};
+    System.out.println("-1");
     System.arraycopy(a, 0, b, 0, a.length);
     System.arraycopy(c, 2, d, 2, c.length - 3);
     System.out.println("数组a的各个元素中的值：" + Arrays.toString(a));
