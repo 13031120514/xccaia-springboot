@@ -15,6 +15,7 @@ public class MainTest {
 
     System.out.println(1);
     System.out.println(2);
+    System.out.println(3);
 //        String responseMessage = "{\n" +
 //                "\t\"status\": \"0\",\n" +
 //                "\t\"message\": \"ok\",\n" +
